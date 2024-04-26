@@ -21,7 +21,7 @@ pipeline {
                     emailext attachLog: true, body: "Unit and Integration tests were failed!", mimeType: 'text/html', subject: "Failed tests for Task6.1C_PipelineWithGitHubAndEmail", to: "joe5763481@gmail.com"
                 }
             }
-        }
+        }  
         stage ("Code Analysis") {
             steps {
                 echo "This stage integrates a code analysis tool to analyse the code and ensure it meets industry standards."
