@@ -15,11 +15,9 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts 'logs/*.txt'
                     emailext attachLog: true, body: "Unit and Integration tests were successful!", mimeType: 'text/html', subject: "Successful tests for Task6.1C_PipelineWithGitHubAndEmail", to: "joe5763481@gmail.com"
                 }
                 failure {
-                    archiveArtifacts 'logs/*.txt'
                     emailext attachLog: true, body: "Unit and Integration tests were failed!", mimeType: 'text/html', subject: "Failed tests for Task6.1C_PipelineWithGitHubAndEmail", to: "joe5763481@gmail.com"
                 }
             }
@@ -37,11 +35,9 @@ pipeline {
             }
             post {
                 success {
-                    archiveArtifacts 'logs/*.txt'
                     emailext attachLog: true, body: "Security scan was successful!", mimeType: 'text/html', subject: "Successful security scan for Task6.1C_PipelineWithGitHubAndEmail", to: "joe5763481@gmail.com"
                 }
                 failure {
-                    archiveArtifacts 'logs/*.txt'
                     emailext attachLog: true, body: "Security scan was failed!", mimeType: 'text/html', subject: "Failed security scan for Task6.1C_PipelineWithGitHubAndEmail", to: "joe5763481@gmail.com"
                 }
             }
