@@ -59,6 +59,6 @@ pipeline {
                 echo "This stage deploys the application to a production server."
                 echo "Production server: AWS EC2 instance"
             }
-        }
+        }  
     }
 }  
